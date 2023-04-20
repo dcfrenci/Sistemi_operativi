@@ -1,0 +1,14 @@
+#verfico il numero di parametri
+case $# in
+1)	echo "Numero corretto di parametri";;
+*)	echo "Numero errato di parametri"
+	exit;;
+esac
+#stampo il parametro passato
+case $1 in
+/home/dc/*)	echo "Il nome è assoluto";;
+/*)		echo "Il nome è relativo";;
+*)		echo "Il nome è relativo semplice";;
+esac
+
+

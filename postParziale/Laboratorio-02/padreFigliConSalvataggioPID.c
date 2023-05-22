@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <time.h>
 
-int random(int n){
+int randomGenerator(int n){
     //return random between 0 and n+ 100
     int casuale = rand() % (n + 101);
     return casuale;
@@ -22,7 +22,7 @@ int main(int val, char **str){
             //siamo nel figlio
             printf("PID nel figlio di indice %i: %i\n", i, getpid());
             srand(time(NULL));
-            exit(random(i));
+            exit(randomGenerator(i));
         }
     }
     for(int i = 0; i < N; i++){
@@ -34,7 +34,7 @@ int main(int val, char **str){
         }
         int ret = status >> 8;
         ret &= 0xFF;
-        printf("PIDfiglio = %i, Indice = %i, Random = %i", PIDfiglio, i, ret);
+        printf("PIDfiglio = %i, Indice = %i, Random = %i\n", PIDfiglio, i, ret);
     }
     exit(0);
 }

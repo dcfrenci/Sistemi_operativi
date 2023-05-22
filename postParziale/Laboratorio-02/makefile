@@ -1,4 +1,4 @@
-all: padreFiglioConStatus padresenzafiglio padreFiglioConStatus1 provaValoriWait padreFigliMultipli padreFigliConSalvataggioPID
+all: padreFiglioConStatus padresenzafiglio padreFiglioConStatus1 provaValoriWait padreFigliMultipli padreFigliConSalvataggioPID padreFiglioConConteggioOccorrenze
 padreFiglioConStatus: padreFiglioConStatus.c
 	gcc -Wall padreFiglioConStatus.c -o padreFiglioConStatus
 padresenzafiglio: padresenzafiglio.c
@@ -11,3 +11,5 @@ padreFigliMultipli: padreFigliMultipli.c
 	gcc -Wall padreFigliMultipli.c -o padreFigliMultipli
 padreFigliConSalvataggioPID: padreFigliConSalvataggioPID.c
 	gcc -Wall padreFigliConSalvataggioPID.c -o padreFigliConSalvataggio
+padreFiglioConConteggioOccorrenze: padreFiglioConConteggioOccorrenze.c
+	gcc -Wall padreFiglioConConteggioOccorrenze.c -o padreFiglioConConteggioOccorrenze
